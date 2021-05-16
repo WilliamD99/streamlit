@@ -1,6 +1,14 @@
 from mongodb import col_orders, col_products
 
-mongo_products = list(col_products.find({}, {"_id": 0, "id": 1, "name": 1}))
+mongo_products = list(col_products.find(
+    {},
+    {
+        "_id": 0,
+        "id": 1,
+        "name": 1,
+        "sku": 1,
+        "categories.name": 1
+    }))
 
 for product in mongo_products:
     product_id = product["id"]

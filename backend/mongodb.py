@@ -7,7 +7,7 @@ username = os.getenv('USER_NAME')
 pw = os.getenv('PW')
 cluster = os.getenv('CLUSTER')
 
-connect_str = "mongodb+srv://{}:{}{}}".format(username, pw, cluster)
+connect_str = "mongodb+srv://{}:{}{}".format(username, pw, cluster)
 client = pymongo.MongoClient(connect_str)
 db = client["myFirstDatabase"]
 
