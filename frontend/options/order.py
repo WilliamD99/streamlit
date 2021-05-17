@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-res = requests.get(f"http://localhost:8080/orders")
+res = requests.get(f"http://host.docker.internal:8080/orders")
 data = res.json()["message"]
 
 total_orders = {"Date": [], "Order#": [], "Status": [], "Customer": [], "Product(s)": [], "Items Sold": [], "Net Sales": []}

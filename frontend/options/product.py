@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-res = requests.get(f"http://localhost:8080/products")
+res = requests.get(f"http://host.docker.internal:8080/products")
 data = res.json()["message"]
 
 categorized_order = {"Product": [], "SKU": [], "Net Sales": [], "Items Sold": [], "Orders": [], "Category": []}
